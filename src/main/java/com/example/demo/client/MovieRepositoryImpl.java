@@ -1,6 +1,9 @@
-package com.example.demo;
+package com.example.demo.client;
 
 
+import com.example.demo.core.Movie;
+import com.example.demo.core.MovieRepository;
+import com.example.demo.config.NaverProperties;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

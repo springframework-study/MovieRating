@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.web;
 
+import com.example.demo.core.Movie;
+import com.example.demo.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
