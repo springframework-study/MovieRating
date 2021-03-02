@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.core.Movie;
+import com.example.demo.core.MovieGroup;
 import com.example.demo.core.MovieRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -16,6 +17,7 @@ public class MovieService {
 
     public List<Movie> search(final String query) {
 
-        return movieRepository.findByQuery(query);
+        MovieGroup movieGroup = new MovieGroup(movieRepository.findByQuery(query));
+        return movieGroup.getListOrderRating();
     }
 }

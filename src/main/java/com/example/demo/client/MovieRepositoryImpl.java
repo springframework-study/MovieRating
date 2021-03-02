@@ -30,7 +30,7 @@ public class MovieRepositoryImpl implements MovieRepository {
         httpHeaders.add("X-Naver-Client-Id", naverProperties.getClientId());
         httpHeaders.add("X-Naver-Client-Secret", naverProperties.getClientSecret());
 
-        String url = naverProperties.getMovieUrl() + "?query" + query;
+        String url = naverProperties.getMovieUrl() + "?query=" + query;
 
         return restTemplate.exchange(url, HttpMethod.GET, new HttpEntity(httpHeaders), ResponseMovie.class)
                 .getBody()
