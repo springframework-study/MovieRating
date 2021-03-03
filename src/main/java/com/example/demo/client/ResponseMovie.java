@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -22,8 +23,11 @@ public class ResponseMovie {
     public static class Item {
         private String title;
         private String link;
+        private String image;
+        private String subtitle;
         private String actor;
         private String director;
+        private String pubDate;
         private float userRating;
     }
 }
