@@ -1,7 +1,7 @@
 package com.example.demo.core;
 
 import java.util.List;
-import java.util.OptionalDouble;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class MovieGroup {
@@ -20,5 +20,9 @@ public class MovieGroup {
         return list.stream().filter(b -> !((Float)b.getUserRating()).equals(0.0f))
                 .sorted((a, b) -> b.getUserRating() > a.getUserRating() ? 1 : -1)
                 .collect(Collectors.toList());
+    }
+
+    public Optional<Movie> getHighestRatingMovie() {
+        return getListOrderRating().stream().findFirst();
     }
 }
